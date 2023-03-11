@@ -1,0 +1,96 @@
+{
+  "name": "gogo-react",
+  "version": "5.3.1",
+  "description": "Gogo - React Bootstrap 4 Admin Dashboard Template",
+  "private": true,
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.1.9",
+    "availity-reactstrap-validation": "^2.7.1",
+    "axios": "^0.21.1",
+    "chart.js": "2.9.4",
+    "classnames": "2.3.1",
+    "firebase": "^8.6.5",
+    "formik": "^2.2.9",
+    "moment": "2.29.1",
+    "mousetrap": "^1.6.5",
+    "node-sass": "^6.0.0",
+    "prop-types": "^15.7.2",
+    "rc-slider": "^9.7.2",
+    "rc-switch": "^3.2.2",
+    "react": "^17.0.2",
+    "react-albus": "^2.0.0",
+    "react-autosuggest": "^10.1.0",
+    "react-big-calendar": "^0.33.5",
+    "react-circular-progressbar": "^2.0.4",
+    "react-contextmenu": "^2.14.0",
+    "react-datepicker": "^4.1.1",
+    "react-dom": "^17.0.2",
+    "react-dropzone-component": "^3.2.0",
+    "react-google-maps": "^9.4.5",
+    "react-headroom": "^3.1.1",
+    "react-image-lightbox": "^5.1.1",
+    "react-intl": "5.20.1",
+    "react-lines-ellipsis": "^0.15.0",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-quill": "^1.3.5",
+    "react-rater": "^5.1.1",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-scroll": "^1.8.2",
+    "react-select": "^4.3.1",
+    "react-sortablejs": "^6.0.0",
+    "react-table": "7.7.0",
+    "react-tagsinput": "^3.19.0",
+    "react-transition-group": "^4.4.2",
+    "react-yandex-maps": "^4.6.0",
+    "reactstrap": "^8.9.0",
+    "redux": "^4.1.0",
+    "redux-saga": "^1.1.3",
+    "sortablejs": "^1.13.0",
+    "video.js": "^7.12.3",
+    "web-vitals": "^2.0.1",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "precommit": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1"
+  }
+}
