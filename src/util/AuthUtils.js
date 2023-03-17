@@ -1,11 +1,11 @@
 import { API_BASE_URL, ACCESS_TOKEN } from '../constants';
 
-const request = (options) => {
+const request = (options, noToken) => {
   const header = new Headers({
     'Content-Type': 'application/json',
   });
 
-  if (localStorage.getItem(ACCESS_TOKEN)) {
+  if (localStorage.getItem(ACCESS_TOKEN) && !noToken) {
     header.append(
       'Authorization',
       `Bearer ${localStorage.getItem(ACCESS_TOKEN)}`
@@ -29,32 +29,33 @@ export function hasTokenSet() {
 }
 
 export function getCurrentUser() {
-  return request({
-    url: `${API_BASE_URL}/user/current-user`,
-    method: 'GET',
-  });
+  return request(
+    {
+      url: `${API_BASE_URL}/user/current-user`,
+      method: 'GET',
+    },
+    false
+  );
 }
 
 export function createAccount(signRequest) {
-  return request({
-    url: `${API_BASE_URL}/auth/create-account`,
-    method: 'POST',
-    body: JSON.stringify(signRequest),
-  });
-}
-
-export function checkUserName(loginRequest) {
-  return request({
-    url: `${API_BASE_URL}/auth/check-username`,
-    method: 'POST',
-    body: JSON.stringify(loginRequest),
-  });
+  return request(
+    {
+      url: `${API_BASE_URL}/auth/create-account`,
+      method: 'POST',
+      body: JSON.stringify(signRequest),
+    },
+    true
+  );
 }
 
 export function login(signRequest) {
-  return request({
-    url: `${API_BASE_URL}/auth/login`,
-    method: 'POST',
-    body: JSON.stringify(signRequest),
-  });
+  return request(
+    {
+      url: `${API_BASE_URL}/auth/login`,
+      method: 'POST',
+      body: JSON.stringify(signRequest),
+    },
+    true
+  );
 }
